@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -9,15 +10,15 @@ const LandingPage = () => {
           <img src="landingLogo.png" alt="Logo" className="h-16 w-auto" />
         </div>
         <div className="hidden md:flex items-center justify-center space-x-8 bg-violet-400 px-8 py-4 rounded-full text-custom-black shadow-2xl">
-          <a href="/pricing" className="text-white hover:text-custom-black">
+          <Link to="/pricing" className="text-white hover:text-custom-black">
             Pricing
-          </a>
-          <a href="#" className="text-white hover:text-custom-black">
+          </Link>
+          <Link to="#" className="text-white hover:text-custom-black">
             Privacy Policy
-          </a>
-          <a href="#" className="text-white hover:text-custom-black">
+          </Link>
+          <Link to="#" className="text-white hover:text-custom-black">
             Terms & Conditions
-          </a>
+          </Link>
         </div>
       </nav>
       <div className="flex-grow flex flex-col justify-center items-center text-center p-4">
