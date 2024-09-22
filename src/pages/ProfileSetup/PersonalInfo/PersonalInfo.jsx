@@ -36,13 +36,15 @@ const PersonalInfo = () => {
   return (
     <div className="min-h-screen flex flex-col items-center">
       <div className="w-full flex items-center justify-center p-4">
-        <div className="flex items-center">
-          <img
-            src="/logo.png"
-            alt="Logo"
-            className="h-20 w-auto object-cover"
-          />
-        </div>
+        <Link to={"/"}>
+          <div className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-20 w-auto object-cover"
+            />
+          </div>
+        </Link>
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col items-center justify-center space-y-1">

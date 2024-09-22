@@ -13,10 +13,16 @@ const LandingPage = () => {
           <Link to="/pricing" className="text-white hover:text-custom-black">
             Pricing
           </Link>
-          <Link to="#" className="text-white hover:text-custom-black">
+          <Link
+            to="/privacyPolicy"
+            className="text-white hover:text-custom-black"
+          >
             Privacy Policy
           </Link>
-          <Link to="#" className="text-white hover:text-custom-black">
+          <Link
+            to="/terms&conditions"
+            className="text-white hover:text-custom-black"
+          >
             Terms & Conditions
           </Link>
         </div>

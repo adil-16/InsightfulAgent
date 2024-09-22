@@ -60,19 +60,29 @@ const Navbar = () => {
             Support
           </Link>
         </div>
-        <div className="text-2xl font-bold">
-          <img src="/logo.png" alt="logo" className="h-16 w-auto" />
-        </div>
+        <Link to={"/"}>
+          <div className="text-2xl font-bold">
+            <img src="/logo.png" alt="logo" className="h-16 w-auto" />
+          </div>
+        </Link>
         <div className="space-x-8 flex items-center">
           <Link
-            to="/privacy-policy"
-            className="text-custom-black hover:text-gray-500"
+            to="/privacyPolicy"
+            className={`text-custom-black hover:text-gray-500 ${
+              activeLink === "/privacyPolicy"
+                ? "text-custom-blue"
+                : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+            }`}
           >
             Privacy Policy
           </Link>
           <Link
-            to="/terms-conditions"
-            className="text-custom-black hover:text-gray-500"
+            to="/terms&conditions"
+            className={`text-custom-black hover:text-gray-500 ${
+              activeLink === "/terms&conditions"
+                ? "text-custom-blue"
+                : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+            }`}
           >
             Terms & Conditions
           </Link>

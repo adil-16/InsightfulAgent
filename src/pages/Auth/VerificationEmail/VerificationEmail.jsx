@@ -6,19 +6,31 @@ const VerificationEmail = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="w-full flex items-center space-x-64 p-4">
-        <div className="flex items-center pl-16">
-          <img src="logo.png" alt="Logo" className="h-20 w-auto object-cover" />
-        </div>
+        <Link to={"/"}>
+          <div className="flex items-center pl-16">
+            <img
+              src="logo.png"
+              alt="Logo"
+              className="h-20 w-auto object-cover"
+            />
+          </div>
+        </Link>
         <div className="flex items-center justify-center space-x-8 bg-gray-100 px-8 py-4 rounded-full text-custom-black shadow-md">
-          <a href="#" className="text-custom-black hover:text-gray-500">
+          <Link to="/pricing" className="text-custom-black hover:text-gray-500">
             Pricing
-          </a>
-          <a href="#" className="text-custom-black hover:text-gray-500">
+          </Link>
+          <Link
+            to="/privacyPolicy"
+            className="text-custom-black hover:text-gray-500"
+          >
             Privacy Policy
-          </a>
-          <a href="#" className="text-custom-black hover:text-gray-500">
+          </Link>
+          <Link
+            to="/terms&conditions"
+            className="text-custom-black hover:text-gray-500"
+          >
             Terms & Conditions
-          </a>
+          </Link>
         </div>
       </div>
 

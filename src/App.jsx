@@ -14,6 +14,8 @@ import ProfessionalInfo from "./pages/ProfileSetup/ProfessionalInfo/Professional
 import LandingPage from "./pages/LandingPage/LandingPage";
 import HomeLayout from "./layouts/HomeLayout/HomeLayout";
 import Pricing from "./pages/Pricing/Pricing";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
           {
             path: "/pricing",
             element: <PublicRoutes Component={Pricing} />,
+          },
+          {
+            path: "/privacyPolicy",
+            element: <PublicRoutes Component={PrivacyPolicy} />,
+          },
+          {
+            path: "/terms&conditions",
+            element: <PublicRoutes Component={TermsAndConditions} />,
           },
         ],
       },
