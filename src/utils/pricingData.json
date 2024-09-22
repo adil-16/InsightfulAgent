@@ -1,0 +1,126 @@
+{
+  "planData": [
+    {
+      "title": "Pay-As-You-Go Plan",
+      "subtitle": "For Individuals",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "1 Free",
+      "priceSuffix": "/monthly",
+      "features": [
+        "1 free report per month",
+        "Additional reports @ $27 each",
+        "Access to only 1 PDF report template",
+        "No other feature"
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-white",
+      "textClass": "text-custom-black",
+      "buttonClass": "bg-custom-gradient"
+    },
+    {
+      "title": "Basic Plan",
+      "subtitle": "For Individuals",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "$97",
+      "priceSuffix": "/monthly",
+      "features": [
+        "Includes 2 reports per month",
+        "Additional reports @ $27 each",
+        "Access to 10 PDF report templates",
+        "Priority customer support"
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-white",
+      "textClass": "text-custom-black",
+      "buttonClass": "bg-custom-gradient"
+    },
+    {
+      "title": "Growth Plan",
+      "subtitle": "For Startups",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "$297",
+      "priceSuffix": "/monthly",
+      "features": [
+        "Includes 5 reports per month",
+        "Additional reports @ $27 each",
+        "Access to 20 PDF report templates",
+        "Dedicated account manager"
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-white",
+      "textClass": "text-custom-black",
+      "buttonClass": "bg-custom-gradient"
+    },
+    {
+      "title": "Professional Plan",
+      "subtitle": "For Big Companies",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "$497",
+      "priceSuffix": "/monthly",
+      "features": [
+        "Includes 10 reports per month",
+        "Additional reports @ $27 each",
+        "Access to 50 PDF report templates",
+        "Personalized onboarding"
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-custom-blue",
+      "textClass": "text-white",
+      "buttonClass": "bg-white text-custom-blue",
+      "isProfessional": true
+    }
+  ],
+  "emailPlanData": [
+    {
+      "title": "Basic Email Plan",
+      "subtitle": "For Individuals",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "$9",
+      "priceSuffix": "/monthly",
+      "features": [
+        "Monthly Market Update for a single city",
+        "Current market trends, average home prices, days on market,  inventory levels, sales volume, price per square foot ",
+        "Buyer and seller activity report for a single city ",
+        "Interest rate trends "
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-white",
+      "textClass": "text-custom-black",
+      "buttonClass": "bg-custom-gradient"
+    },
+    {
+      "title": "Premium Plan",
+      "subtitle": "For Growth",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "$29",
+      "priceSuffix": "/monthly",
+      "features": [
+        "All features of the PRO Plan",
+        "Reports for up to 5 cities",
+        "New construction and development reports, luxury market reports, market forecasts, competitor analysis, customizable reports and priority support"
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-custom-blue",
+      "textClass": "text-white",
+      "buttonClass": "bg-white text-custom-blue",
+      "isPopular": true
+    },
+    {
+      "title": "Professional Email Plan",
+      "subtitle": "For Startups",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": "$19",
+      "priceSuffix": "/monthly",
+      "features": [
+        "All features of the Basic Plan like Monthly Market Update",
+        "Reports for up to 3 cities ",
+        "Neighborhood analysis, economic and demographic trends, housing affordability index",
+        "Dedicated account manager"
+      ],
+      "buttonText": "Get Started",
+      "bgClass": "bg-white",
+      "textClass": "text-custom-black",
+      "buttonClass": "bg-custom-gradient"
+    }
+  ]
+}

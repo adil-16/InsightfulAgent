@@ -34,6 +34,8 @@ const Navbar = () => {
     setDropdownOpen((prev) => !prev);
   };
 
+  console.log(activeLink);
+
   return (
     <nav>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -48,7 +50,7 @@ const Navbar = () => {
             to="/pricing"
             className={`text-custom-black hover:text-gray-500 ${
               activeLink === "/pricing"
-                ? "text-blue-800"
+                ? "text-custom-blue"
                 : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
             }`}
           >

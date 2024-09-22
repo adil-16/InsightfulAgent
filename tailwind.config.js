@@ -15,7 +15,7 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        "custom-gradient": "linear-gradient(180deg, #4A3AFF 0%, #221F55 100%)",
+        "custom-gradient": "linear-gradient(270deg, #A058EB 55%, #137DE7 140%)",
       },
     },
   },
