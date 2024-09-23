@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [activeLink, setActiveLink] = useState(window.location.pathname);
 
@@ -34,12 +35,31 @@ const Navbar = () => {
     setDropdownOpen((prev) => !prev);
   };
 
-  console.log(activeLink);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((prev) => !prev);
+  };
 
   return (
-    <nav>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="space-x-8 hidden md:flex">
+    <nav className="relative z-50">
+      <div className="container mx-auto px-2 py-4 flex justify-between items-center">
+        <button className="lg:hidden text-gray-900" onClick={toggleMobileMenu}>
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <div className="space-x-16 hidden lg:flex">
           <Link to="/home" className="text-custom-black hover:text-gray-500">
             Home
           </Link>
@@ -60,12 +80,17 @@ const Navbar = () => {
             Support
           </Link>
         </div>
+
         <Link to={"/"}>
           <div className="text-2xl font-bold">
-            <img src="/logo.png" alt="logo" className="h-16 w-auto" />
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="h-20 w-auto object-contain"
+            />
           </div>
         </Link>
-        <div className="space-x-8 flex items-center">
+        <div className="space-x-8 hidden lg:flex items-center">
           <Link
             to="/privacyPolicy"
             className={`text-custom-black hover:text-gray-500 ${
@@ -86,6 +111,9 @@ const Navbar = () => {
           >
             Terms & Conditions
           </Link>
+        </div>
+
+        <div className="flex items-center">
           <button
             type="button"
             className="flex text-sm rounded-full md:me-0"
@@ -94,18 +122,17 @@ const Navbar = () => {
             onClick={toggleDropdown}
           >
             <span className="sr-only">Open user menu</span>
-
             <img
               className="w-12 h-12 rounded-full"
               src={"/Home/profile.png"}
-              // src={profilePicture}
               alt="user photo"
             />
           </button>
+
           {dropdownOpen && (
             <div
               ref={dropdownRef}
-              className="absolute right-32 top-16 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white dark:divide-gray-600 z-20"
+              className="absolute right-6 md:right-32 top-16 mt-2 w-36 md:w-48 bg-white divide-y divide-gray-100 rounded-lg shadow-xl z-20"
               id="user-dropdown"
             >
               <ul className="py-2" aria-labelledby="user-menu-button">
@@ -115,7 +142,7 @@ const Navbar = () => {
                       setDropdownOpen(false);
                     }}
                     to="/pricing"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-custom-black dark:hover:text-white"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Settings
                   </Link>
@@ -123,7 +150,7 @@ const Navbar = () => {
                 <li>
                   <button
                     // onClick={handleLogout}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-custom-black dark:hover:text-white w-full text-left"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
                   >
                     Sign Out
                   </button>
@@ -133,6 +160,86 @@ const Navbar = () => {
           )}
         </div>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-40">
+          <div className="fixed top-0 left-0 w-64 bg-white h-full z-50 p-4">
+            <button className="text-gray-900" onClick={toggleMobileMenu}>
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+
+            <div className="mt-4">
+              <Link
+                to="/home"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                onClick={toggleMobileMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to="/reports"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                onClick={toggleMobileMenu}
+              >
+                Reports
+              </Link>
+              <Link
+                to="/pricing"
+                className={`block px-4 py-2 ${
+                  activeLink === "/pricing"
+                    ? "text-custom-blue"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                }`}
+                onClick={toggleMobileMenu}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/support"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                onClick={toggleMobileMenu}
+              >
+                Support
+              </Link>
+              <Link
+                to="/privacyPolicy"
+                className={`block px-4 py-2 ${
+                  activeLink === "/privacyPolicy"
+                    ? "text-custom-blue"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                }`}
+                onClick={toggleMobileMenu}
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/terms&conditions"
+                className={`block px-4 py-2 ${
+                  activeLink === "/terms&conditions"
+                    ? "text-custom-blue"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                }`}
+                onClick={toggleMobileMenu}
+              >
+                Terms and Conditions
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

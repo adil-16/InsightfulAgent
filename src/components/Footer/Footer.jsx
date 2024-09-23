@@ -6,12 +6,12 @@ import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <footer className="bg-white py-12">
-      <div className="container mx-auto px-4 grid lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
         <div className="space-y-4 text-center lg:text-left">
           <img
             src="/logo.png"
             alt="Logo"
-            className="mx-auto lg:mx-0 h-20 w-auto"
+            className="mx-auto lg:mx-0 h-20 w-auto object-contain"
           />
           <p className="text-custom-gray text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alquam.

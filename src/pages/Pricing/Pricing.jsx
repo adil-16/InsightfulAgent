@@ -47,7 +47,9 @@ const Pricing = () => {
 
       <div
         className={`grid ${
-          isEmail ? "grid-cols-3" : "md:grid-cols-4"
+          isEmail
+            ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4"
         } gap-6 mx-auto`}
       >
         {(isEmail ? emailPlanData : planData).map((plan, idx) => (
@@ -57,9 +59,9 @@ const Pricing = () => {
           >
             {plan.isProfessional || plan.isPopular ? (
               <div
-                className={`absolute ${
-                  plan?.isProfessional ? "top-6 left-52" : "top-6 left-64"
-                } bg-indigo-300 text-sm text-white px-3 py-1 rounded-lg`}
+                className={`absolute top-8 ${
+                  isEmail ? "left-56" : "left-60"
+                } transform -translate-x-1/2 bg-indigo-300 text-sm text-white px-3 py-1 rounded-lg`}
               >
                 {plan.isProfessional || plan.isPopular ? "Popular" : ""}
               </div>
