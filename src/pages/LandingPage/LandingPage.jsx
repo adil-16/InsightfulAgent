@@ -7,12 +7,36 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { saveEmailToFirestore } from "../../firebase/ApiFunctions/UserFunctions";
+import { toast } from "react-toastify";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object({
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+});
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNotifyMe = async (values, { resetForm }) => {
+    setLoading(true);
+    const isSuccess = await saveEmailToFirestore(values.email);
+    setLoading(false);
+    if (isSuccess) {
+      toast.success("Email saved successfully!");
+      resetForm();
+    } else {
+      setLoading(false);
+      toast.error("Error saving email. Please try again.");
+    }
   };
 
   return (
@@ -93,14 +117,38 @@ const LandingPage = () => {
         </p>
 
         <div className="flex flex-col md:flex-row mt-6 w-full max-w-md">
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="px-4 py-2 rounded-full text-sm bg-transparent border border-custom-gray text-white mb-3 md:mb-0 md:mr-4 w-full"
-          />
-          <button className="px-6 py-1 bg-white text-custom-blue rounded-full text-sm w-full md:w-1/3">
-            Notify Me
-          </button>
+          <Formik
+            initialValues={{ email: "" }}
+            validationSchema={validationSchema}
+            onSubmit={handleNotifyMe}
+          >
+            {({ handleSubmit }) => (
+              <Form className="flex flex-col md:flex-row mt-6 w-full max-w-md">
+                <Field
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className="px-4 py-2 rounded-full text-sm bg-transparent border border-custom-gray text-white mb-3 md:mb-0 md:mr-4 w-full"
+                />
+                <button
+                  type="submit"
+                  className="px-6 py-1 bg-white text-custom-blue rounded-full text-sm w-full md:w-1/3"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <div className="text-custom-black">Loading...</div>
+                  ) : (
+                    "Notify Me"
+                  )}
+                </button>
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-600 font-bold text-sm mt-2"
+                />
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
 
