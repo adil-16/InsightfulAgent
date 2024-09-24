@@ -15,7 +15,7 @@
       "buttonText": "Get Started",
       "bgClass": "bg-white",
       "textClass": "text-custom-black",
-      "buttonClass": "bg-custom-gradient"
+      "buttonClass": "bg-custom-gradient text-white"
     },
     {
       "title": "Basic Plan",
@@ -32,7 +32,7 @@
       "buttonText": "Get Started",
       "bgClass": "bg-white",
       "textClass": "text-custom-black",
-      "buttonClass": "bg-custom-gradient"
+      "buttonClass": "bg-custom-gradient text-white"
     },
     {
       "title": "Growth Plan",
@@ -49,7 +49,7 @@
       "buttonText": "Get Started",
       "bgClass": "bg-white",
       "textClass": "text-custom-black",
-      "buttonClass": "bg-custom-gradient"
+      "buttonClass": "bg-custom-gradient text-white"
     },
     {
       "title": "Professional Plan",
@@ -86,7 +86,7 @@
       "buttonText": "Get Started",
       "bgClass": "bg-white",
       "textClass": "text-custom-black",
-      "buttonClass": "bg-custom-gradient"
+      "buttonClass": "bg-custom-gradient text-white"
     },
     {
       "title": "Premium Plan",
@@ -120,7 +120,7 @@
       "buttonText": "Get Started",
       "bgClass": "bg-white",
       "textClass": "text-custom-black",
-      "buttonClass": "bg-custom-gradient"
+      "buttonClass": "bg-custom-gradient text-white"
     }
   ]
 }

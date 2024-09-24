@@ -16,6 +16,7 @@ import HomeLayout from "./layouts/HomeLayout/HomeLayout";
 import Pricing from "./pages/Pricing/Pricing";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import PlatformInfo from "./pages/ProfileSetup/PlatformInfo/PlatformInfo";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/profileSetup/professionalInfo",
         element: <PublicRoutes Component={ProfessionalInfo} />,
+      },
+      {
+        path: "/profileSetup/platformInfo",
+        element: <PublicRoutes Component={PlatformInfo} />,
       },
       {
         element: <HomeLayout />,

@@ -95,7 +95,7 @@ const ProfessionalInfo = () => {
           </div>
 
           <div className="flex items-center justify-center">
-            <Link to={"/profileSetup/professionalInfo"}>
+            <Link to={"/profileSetup/platformInfo"}>
               <ContinueButton text="Continue" />
             </Link>
           </div>
