@@ -70,7 +70,7 @@ const TermsAndConditions = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-custom-blue text-center mb-2">
-        Privacy Policy
+        Terms & Conditions
       </h1>
       <div className="flex flex-col p-8 space-x-6 mt-10 md:flex-row">
         <div className="md:w-1/4 mb-6 md:mb-0">
