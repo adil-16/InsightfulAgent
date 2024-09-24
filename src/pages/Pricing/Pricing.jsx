@@ -55,13 +55,13 @@ const Pricing = () => {
         {(isEmail ? emailPlanData : planData).map((plan, idx) => (
           <div
             key={idx}
-            className={`${plan.bgClass} shadow-xl h-auto p-10 rounded-xl relative`}
+            className={`${plan?.bgClass} shadow-xl h-auto p-10 rounded-xl relative`}
           >
             {plan.isProfessional || plan.isPopular ? (
               <div
                 className={`absolute top-8 ${
                   isEmail ? "left-56" : "left-60"
-                } transform -translate-x-1/2 border text-sm text-white px-3 py-1 rounded-lg`}
+                } transform -translate-x-1/2 bg-indigo-300 text-sm text-white px-3 py-1 rounded-lg`}
               >
                 {plan.isProfessional || plan.isPopular ? "Popular" : ""}
               </div>
