@@ -46,11 +46,11 @@ const LandingPage = () => {
           <img
             src="landingLogo.png"
             alt="Logo"
-            className="h-16 md:h-20 w-auto object-contain"
+            className="h-16 md:h-24 w-auto object-contain"
           />
         </div>
 
-        <div className="hidden md:flex flex-grow justify-center items-center">
+        {/* <div className="hidden md:flex flex-grow justify-center items-center">
           <div className="flex items-center space-x-8 bg-violet-400 lg:mr-72 px-8 py-4 rounded-full text-custom-black shadow-2xl">
             <Link to="/pricing" className="text-white hover:text-custom-black">
               Pricing
@@ -68,9 +68,9 @@ const LandingPage = () => {
               Terms & Conditions
             </Link>
           </div>
-        </div>
+        </div> */}
 
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
@@ -81,10 +81,10 @@ const LandingPage = () => {
               <FaBars className="h-6 w-6" />
             )}
           </button>
-        </div>
+        </div> */}
       </nav>
 
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <div className="md:hidden bg-violet-400 text-center p-4">
           <Link
             to="/pricing"
@@ -105,7 +105,7 @@ const LandingPage = () => {
             Terms & Conditions
           </Link>
         </div>
-      )}
+      )} */}
 
       <div className="flex-grow flex flex-col py-44 justify-center items-center text-center shadow-md">
         <h1 className="text-4xl md:text-5xl font-semibold text-white tracking-widest">
@@ -230,7 +230,7 @@ const LandingPage = () => {
         <div className="mt-6 text-center space-y-6">
           <div className="text-left max-w-xl mx-auto">
             <h4 className="font-semibold text-lg text-white">
-              Real State Agents:
+              Real Estate Agents:
             </h4>
             <p className="text-white">
               Save time, close more deals, and provide clients with reports that
