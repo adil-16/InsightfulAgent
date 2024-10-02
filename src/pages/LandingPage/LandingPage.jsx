@@ -41,8 +41,8 @@ const LandingPage = () => {
 
   return (
     <div className="bg-custom-gradient flex flex-col h-full">
-      <nav className="flex items-center justify-between p-4 flex-shrink-0">
-        <div className="flex items-center pl-4 md:pl-16">
+      <nav className="flex items-center justify-center p-4 flex-shrink-0">
+        <div className="flex items-center">
           <img
             src="landingLogo.png"
             alt="Logo"
@@ -128,11 +128,11 @@ const LandingPage = () => {
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="px-4 py-2 rounded-full text-sm bg-transparent border border-custom-gray text-white mb-3 md:mb-0 md:mr-4 w-full"
+                  className="px-4 py-2 rounded-full text-sm bg-transparent border border-white text-white mb-3 md:mb-0 md:mr-4 w-full"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-1 bg-white text-custom-blue rounded-full text-sm w-full md:w-1/3"
+                  className="px-6 py-1 bg-white text-custom-blue font-semibold rounded-full text-sm w-full md:w-1/3"
                   disabled={loading}
                 >
                   {loading ? (
@@ -144,7 +144,7 @@ const LandingPage = () => {
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="text-red-600 font-bold text-sm mt-2"
+                  className="text-white font-bold text-sm mt-2"
                 />
               </Form>
             )}
@@ -227,8 +227,8 @@ const LandingPage = () => {
         <h3 className="text-2xl font-bold text-white text-center">
           Who Insightful Agent Helps
         </h3>
-        <div className="mt-6 text-center space-y-6">
-          <div className="text-left max-w-xl mx-auto">
+        <div className="mt-6 space-y-6">
+          <div className="text-left max-w-4xl mx-auto">
             <h4 className="font-semibold text-lg text-white">
               Real Estate Agents:
             </h4>
@@ -237,7 +237,7 @@ const LandingPage = () => {
               stand out.
             </p>
           </div>
-          <div className="text-left max-w-xl mx-auto">
+          <div className="text-left max-w-4xl mx-auto">
             <h4 className="font-semibold text-lg text-white">
               Home Sellers & Buyers:
             </h4>
@@ -246,21 +246,21 @@ const LandingPage = () => {
               research-driven valuations.
             </p>
           </div>
-          <div className="text-left max-w-xl mx-auto">
+          <div className="text-left max-w-4xl mx-auto">
             <h4 className="font-semibold text-lg text-white">Investors:</h4>
             <p className="text-white">
               Discover undervalued properties and maximize returns with
               data-backed insights
             </p>
           </div>
-          <div className="text-left max-w-xl mx-auto">
+          <div className="text-left max-w-4xl mx-auto">
             <h4 className="font-semibold text-lg text-white">Appraisers:</h4>
             <p className="text-white">
               Use Insightful Agent to further validate your findings and enhance
               your credibility.
             </p>
           </div>
-          <div className="text-left max-w-xl mx-auto">
+          <div className="text-left max-w-4xl mx-auto">
             <h4 className="font-semibold text-lg text-white">Consultants:</h4>
             <p className="text-white">
               Provide clients with a comprehensive, data-driven analysis to
