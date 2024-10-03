@@ -128,7 +128,7 @@ const LandingPage = () => {
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="px-4 py-2 rounded-full text-sm bg-transparent border border-white text-white mb-3 md:mb-0 md:mr-4 w-full"
+                  className="px-4 py-2 rounded-full text-sm bg-transparent placeholder-white border border-white text-white mb-3 md:mb-0 md:mr-4 w-full"
                 />
                 <button
                   type="submit"
