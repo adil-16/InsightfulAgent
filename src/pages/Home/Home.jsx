@@ -41,7 +41,7 @@ const Home = () => {
           <p className="text-lg text-white mb-8">
             Empowering Real Estate Professionals with AI-Driven Insights
           </p>
-          <div className="bg-white w-full md:w-full lg:w-1/2 rounded-xl p-4 mb-4">
+          <div className="bg-white w-full max-w-xl rounded-xl p-4 mb-4">
             <p className="text-custom-black p-4 font-semibold text-center md:text-left">
               Enter Subject Property Address
             </p>
