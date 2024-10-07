@@ -17,6 +17,7 @@ import Pricing from "./pages/Pricing/Pricing";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import PlatformInfo from "./pages/ProfileSetup/PlatformInfo/PlatformInfo";
+import Home from "./pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         element: <HomeLayout />,
         children: [
+          {
+            path: "/home",
+            element: <PublicRoutes Component={Home} />,
+          },
           {
             path: "/pricing",
             element: <PublicRoutes Component={Pricing} />,

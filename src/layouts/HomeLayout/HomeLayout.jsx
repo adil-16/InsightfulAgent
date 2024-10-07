@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer";
 const HomeLayout = () => {
   const [loading, isLoading] = useState(false);
   const navigation = useNavigation();
+  const [isTransparent, setIsTransparent] = useState(false);
 
   //   const [menu, setMenu] = useState(false);
   //   const toggleMenu = () => {
@@ -20,7 +21,10 @@ const HomeLayout = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar
+        isTransparent={isTransparent}
+        setIsTransparent={setIsTransparent}
+      />
 
       {/* {!menu && (
         <div
