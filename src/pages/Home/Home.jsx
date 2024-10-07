@@ -41,12 +41,12 @@ const Home = () => {
           <p className="text-lg text-white mb-8">
             Empowering Real Estate Professionals with AI-Driven Insights
           </p>
-          <div className="bg-white w-1/2 rounded-xl p-4 mb-4">
-            <p className="text-custom-black p-4 font-semibold">
+          <div className="bg-white w-full md:w-full lg:w-1/2 rounded-xl p-4 mb-4">
+            <p className="text-custom-black p-4 font-semibold text-center md:text-left">
               Enter Subject Property Address
             </p>
 
-            <div className="bg-white p-2 rounded-full border flex items-center w-[350px] md:w-[500px]">
+            <div className="bg-white p-2 rounded-full border flex items-center w-full md:w-full lg:w-[500px] mx-auto">
               <FiSearch className="text-custom-gray ml-2" />
 
               <input
@@ -54,30 +54,52 @@ const Home = () => {
                 placeholder="1234, Main Street New Mexico City"
                 className="w-full p-3 text-black outline-none rounded-l-full ml-2"
               />
+
               <FiArrowRight className="text-gray-500 mr-2" />
             </div>
           </div>
-          <button className="bg-custom-gradient w-1/5 text-white px-6 py-4 rounded-full ml-2">
-            Get Started
-          </button>
+          <div className="flex justify-center md:justify-start mt-4">
+            <button className="bg-custom-gradient w-full md:w-1/2 lg:w-1/5 text-white px-6 py-4 rounded-full">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
-
-      <div className="flex flex-col items-center justify-center p-20 md:p-48">
-        <p className="text-custom-blue text-center text-xl font-semibold mb-6">
+      <div className="flex flex-col items-center justify-center p-10 md:p-32">
+        <p className="text-custom-blue text-center text-lg md:text-xl font-semibold mb-6">
           Trusted by 10,000+ companies around the world
         </p>
-        <div className="flex justify-center space-x-6 md:space-x-10">
-          <img src="/Home/google.png" alt="Google" className="h-8 md:h-12" />
+        <div className="flex flex-wrap justify-center gap-10 md:gap-16">
+          <img
+            src="/Home/google.png"
+            alt="Google"
+            className="h-6 w-auto md:h-10"
+          />
           <img
             src="/Home/facebook.png"
             alt="Facebook"
-            className="h-8 md:h-12"
+            className="h-6 w-auto md:h-10"
           />
-          <img src="/Home/webflow.png" alt="YouTube" className="h-8 md:h-12" />
-          <img src="/Home/pin.png" alt="Pinterest" className="h-8 md:h-12" />
-          <img src="/Home/twitch.png" alt="Twitch" className="h-8 md:h-12" />
-          <img src="/Home/webflow.png" alt="Webflow" className="h-8 md:h-12" />
+          <img
+            src="/Home/youtube.png"
+            alt="YouTube"
+            className="h-6 w-auto md:h-10"
+          />
+          <img
+            src="/Home/pin.png"
+            alt="Pinterest"
+            className="h-6 w-auto md:h-10"
+          />
+          <img
+            src="/Home/twitch.png"
+            alt="Twitch"
+            className="h-6 w-auto md:h-10"
+          />
+          <img
+            src="/Home/webflow.png"
+            alt="Webflow"
+            className="h-6 w-auto md:h-10"
+          />
         </div>
       </div>
 
@@ -94,7 +116,6 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-6 px-6">
-          {/* Card 1 */}
           <div className="bg-white rounded-lg shadow-md w-full md:w-1/4 flex flex-col items-center justify-between ">
             <div className="flex-1 flex items-center justify-center">
               <img
@@ -489,10 +510,6 @@ const Home = () => {
             >
               Subscribe
             </button>
-
-            {/* <p className="text-gray-300 w-full md:w-auto text-center mt-4 md:mt-0">
-              Join the 10,000 users in our newsletter
-            </p> */}
           </form>
         </div>
       </div>
